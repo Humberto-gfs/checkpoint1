@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+    <script src="biblioteca.js" defer></script>
+</head>
+
+<body>
+    <h1>Biblioteca Virtual</h1>
+
+
+    <section>
+        <h2>Adicionar Livro</h2>
+        <form id="formCadastroLivro">
+            <table>
+                <tr>
+                    <td><label for="titulo">Título:</label></td>
+                    <td><input type="text" id="titulo" required></td>
+                </tr>
+                <tr>
+                    <td><label for="autor">Autor:</label></td>
+                    <td><input type="text" id="autor" required></td>
+                </tr>
+                <tr>
+                    <td><label for="paginas">Quantas Páginas:</label></td>
+                    <td><input type="number" id="paginas" required></td>
+                </tr>
+                <tr>
+                    <td><label for="genero">Gênero:</label></td>
+                    <td><input type="text" id="genero" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Cadastrar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+
+    <section>
+        <h2>Buscar Livros por Autor</h2>
+        <form id="formBuscaAutor">
+            <label for="buscaAutor">Digite o nome do autor:</label>
+            <input type="text" id="buscaAutor" required>
+            <button type="button" onclick="buscarPorAutor()">Buscar</button>
+        </form>
+        <div id="resultadoBusca">
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Livros Cadastrados</h2>
+        <table id="tbLivro" border="1">
+            <thead>
+                <tr>
+                    <th>Autor</th>
+                    <th>Gênero</th>
+                    <th>Páginas</th>
+                    <th>Título</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbLivros">
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>
